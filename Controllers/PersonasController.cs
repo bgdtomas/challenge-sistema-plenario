@@ -28,24 +28,6 @@ namespace proyectoABMC.Controllers
             return View(_context.Personas.ToList());
         }
 
-        public IActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var persona = _context.Personas
-                .FirstOrDefault(m => m.PersonaId == id);
-            if (persona == null)
-            {
-                return NotFound();
-            }
-
-            return View(persona);
-        }
-
-
         public IActionResult Create()
         {
             return View();

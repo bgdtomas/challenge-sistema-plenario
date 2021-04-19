@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\proyectoABMC.csproj": {}
+    "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\challenge-sistema-plenario\\proyectoABMC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\proyectoABMC.csproj": {
+    "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\challenge-sistema-plenario\\proyectoABMC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\proyectoABMC.csproj",
+        "projectUniqueName": "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\challenge-sistema-plenario\\proyectoABMC.csproj",
         "projectName": "proyectoABMC",
-        "projectPath": "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\proyectoABMC.csproj",
+        "projectPath": "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\challenge-sistema-plenario\\proyectoABMC.csproj",
         "packagesPath": "C:\\Users\\matut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\obj\\",
+        "outputPath": "C:\\Users\\matut\\OneDrive\\Documentos\\repos\\challenge-sist-plenario\\proyectoABMC\\challenge-sistema-plenario\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\matut\\AppData\\Roaming\\NuGet\\NuGet.Config",
