@@ -1,0 +1,45 @@
+﻿@model IEnumerable<proyectoABMC.Models.Telefono>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="d-flex justify-content-center mb-3">Grilla de Telefonos</h1>
+@{
+    var aID = ViewContext.RouteData.Values["id"];
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PersonaID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NroTelefono)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PersonaID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NroTelefono)
+                </td>
+                <td class="d-flex justify-content-end">
+                    <a asp-action="Edit" asp-route-id="@item.TelefonoId" class="btn btn-outline-info">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.TelefonoId" class="btn btn-outline-danger">Borrar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<p class="d-flex justify-content-between">
+    <a asp-action="Index" asp-controller="Personas" class="btn btn-warning">Volver</a>
+    <a asp-action="Create" asp-route-id="@aID" class="btn btn-primary">Nuevo telefono</a>
+</p>

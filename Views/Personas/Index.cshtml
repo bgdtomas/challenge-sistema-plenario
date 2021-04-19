@@ -1,0 +1,62 @@
+﻿@model IEnumerable<proyectoABMC.Models.Persona>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="d-flex justify-content-center">Grilla de personas</h1>
+
+<div class="d-flex justify-content-between mb-3">
+    <a asp-action="Create" class="btn btn-primary">Añadir persona</a>
+
+    <form asp-action="Index" class="d-flex justify-content-end">
+        <div class="input-group">
+            <input type="text" placeholder="Search.." name="nombre" class="form-control">
+            <div class="input-group-prepend">
+                <input type="submit" value="Buscar" class="btn btn-outline-secondary">
+            </div>
+        </div>
+    </form>
+
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaNacimiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreditoMaximo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Convert.ToString(string.Format("{0:dd/MM/yyyy}", item.FechaNacimiento))
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreditoMaximo)
+                </td>
+                <td class="d-flex justify-content-end">
+                    <a asp-action="Edit" asp-route-id="@item.PersonaId" class="btn btn-outline-info">Editar</a>
+                    <a asp-action="Delete" asp-route-id="@item.PersonaId" class="btn btn-outline-danger">Borrar</a>
+                    <a asp-controller="Telefonos" asp-action="Index" asp-route-id="@item.PersonaId" class="btn btn-outline-primary">Ver Telefonos</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<hr />
+<p class="d-flex justify-content-end">
+    <a asp-action="Create" class="btn btn-primary">Añadir persona</a>
+</p>

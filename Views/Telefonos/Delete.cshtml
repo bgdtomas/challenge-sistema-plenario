@@ -1,0 +1,29 @@
+﻿@model proyectoABMC.Models.Telefono
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<h3>Confirmacion de eliminacion del telefono @Model.NroTelefono</h3>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PersonaID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PersonaID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NroTelefono)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NroTelefono)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TelefonoId" />
+        <input type="submit" value="Borrar" class="btn btn-danger" /> 
+        <a asp-action="Index" asp-route-id="@Model.PersonaID"class="btn btn-success" >Cancelar</a>
+    </form>
+</div>
